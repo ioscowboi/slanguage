@@ -1,0 +1,73 @@
+<!-- 
+# Public: BOILERPLATE.erb
+# A template to display around all user interaction on the front-end.
+#
+# Attributes:
+# none
+#
+# Methods:
+# none 
+#
+# Attributes:
+# none
+#
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Slanguage :: The game to test your swag</title>
+
+  <link rel="stylesheet" href='/css/main.css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li><a href="/about">about</a></li>
+
+    </ul>
+  </div>
+</br>
+<div class="navdiv">
+<h1>SLANGUAGE</h1></div>
+</br>
+    <div class='tight'>
+
+  <a href=""><img class="main" src="/images/collage.png"></a>
+  
+
+    <%= yield %>
+
+  </div>
+  <div class="navdiv">
+    
+      <input class ="beginbutton" type="submit" value=" Begin " onclick="goHome()" /></div>
+</br>
+</br>
+</body>
+
+<script type="text/javascript">date_populate("date", "month", "year");</script>
+<script type="text/javascript">
+function goBack () {
+history.go(-1);
+return false;
+}
+</script>
+  
+<script type="text/javascript">
+function goHome () {
+window.location = '/begin'; 
+return false;
+}
+</script>
+
+
+
+</html>

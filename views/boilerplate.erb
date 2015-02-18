@@ -1,0 +1,79 @@
+<!-- 
+# Public: BOILERPLATE.erb
+# A template to display around all user interaction on the front-end.
+#
+# Attributes:
+# none
+#
+# Methods:
+# none 
+#
+# Attributes:
+# none
+#
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Slanguage :: The game to test your swag</title>
+
+  <link rel="stylesheet" href='/css/main.css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li><a href="/page1">about</a></li>
+
+    </ul>
+  </div>
+</br>
+<div class="navdiv">
+<h1>SLANGUAGE</h1></div>
+</br>
+    <div>
+  <h2>which is most popular?</h2>
+
+    <%= yield %>
+
+  </div>
+  <div class="navdiv">
+    
+      <input class ="navbutton" type="submit" value="Restart" onclick="goHome()" /></div>
+</br>
+</br>
+</body>
+
+<script type="text/javascript">date_populate("date", "month", "year");</script>
+<script type="text/javascript">
+function goBack () {
+history.go(-1);
+return false;
+}
+</script>
+  
+<script type="text/javascript">
+function goHome () {
+window.location = '/'; 
+return false;
+}
+</script>
+
+<script>
+function myFunction() {
+if (confirm("ARE YOU SURE? THIS WILL PERMANENTLY DELETE THE RECORD!") == true) {       
+} else {      
+}
+}
+</script>
+
+</html>

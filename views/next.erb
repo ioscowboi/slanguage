@@ -1,0 +1,16 @@
+<a href=""><img class="main" src="/images/momandchild.jpg"></a>
+<div class='align_stuff_left'>
+<form action="/next">
+   <fieldset>
+
+     <% @all_choices.each do |choice| %>
+     <input type ="radio" name="answer" value="<%= choice.id %>">  <%= choice.text %>
+<br />
+<br />
+     <% end %>
+   </fieldset>
+<br />
+     <div class="centerButton"> <input class ="beginbutton" type="submit" value="Check Answer" /></div>
+   </fieldset>
+  
+</form></div>
