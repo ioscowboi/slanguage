@@ -2,11 +2,11 @@
      <a href=""><img class="main" src="<%= image.location %>"></a>
      <% end %>
 <div class='align_stuff_left'>
-<form action="/begin">
+<form action="/validate">
    <fieldset>
 
      <% @all_choices.each do |choice| %>
-     <input type ="radio" name="answer" value="<%= choice.id %>">  <%= choice.text %>
+     <input type ="radio" name="answer" value="<%= choice.correct_answer %>">  <%= choice.text %>
 <br />
      <% end %>
    </fieldset>

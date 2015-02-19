@@ -16,9 +16,10 @@
 <!DOCTYPE html>
 <html>
 
+<!--note: the meta tag here redirects back to /begin route -->
 <head>
-  <meta http-equiv="refresh" CONTENT="7;URL=/times_up">
-  <title>Slanguage :: The game to test your language swag</title>
+  <meta http-equiv="refresh" CONTENT="3;URL=/begin">
+  <title>Slanguage :: The game to test your swag</title>
 
   <link rel="stylesheet" href='/css/main.css'>
 
@@ -41,8 +42,8 @@
 <div class="navdiv">
 <h1>SLANGUAGE</h1></div>
 </br>
-    <div>
-  <h2>clue:</h2>
+    <div class="tightdark">
+
 
     <%= yield %>
 
@@ -54,21 +55,13 @@
 </br>
 </body>
 
-<script type="text/javascript">date_populate("date", "month", "year");</script>
-<script type="text/javascript">
-function goBack () {
-history.go(-1);
-return false;
-}
-</script>
-  
+
 <script type="text/javascript">
 function goHome () {
 window.location = '/'; 
 return false;
 }
 </script>
-
 
 
 </html>
