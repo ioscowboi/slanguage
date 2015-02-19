@@ -1,11 +1,12 @@
-<a href=""><img class="main" src="/images/momandchild.jpg"></a>
+     <% @image_picker.each do |image| %>
+     <a href=""><img class="main" src="<%= image.location %>"></a>
+     <% end %>
 <div class='align_stuff_left'>
-<form action="/next">
+<form action="/begin">
    <fieldset>
 
      <% @all_choices.each do |choice| %>
      <input type ="radio" name="answer" value="<%= choice.id %>">  <%= choice.text %>
-<br />
 <br />
      <% end %>
    </fieldset>

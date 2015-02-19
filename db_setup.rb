@@ -2,7 +2,7 @@ DATABASE.results_as_hash = true
 
 DATABASE.execute("CREATE TABLE IF NOT EXISTS cards 
                   (id INTEGER PRIMARY KEY,
-                  location TEXT)")
+                  location TEXT, card_id INTEGER)")
 
 
 DATABASE.execute("CREATE TABLE IF NOT EXISTS answers 
