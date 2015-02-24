@@ -13,9 +13,10 @@ require 'twilio-ruby'
 
 DATABASE = SQLite3::Database.new('slanguage.db')
 
-require_relative 'db_setup.rb'
 # Loading all erb and rb files so they can talk to one another as needed: 
 
+require_relative 'db_setup.rb'
+require_relative 'models/director.rb'
 require_relative 'models/answer.rb'
 require_relative 'models/card.rb'
 require_relative 'Helper'
