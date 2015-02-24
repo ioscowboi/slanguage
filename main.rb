@@ -1,7 +1,11 @@
 require 'sinatra'
 require 'pry'
+require 'rubygems'
 # Initialize and enable our program to run SQLITE3 : 
 require 'sqlite3'
+
+# API implementation requires twilio-ruby
+require 'twilio-ruby' 
 
 # Here, we create the actual database if it's not created yet.
 # Otherwise, it will simply load the existing database: 
@@ -31,6 +35,7 @@ get "/begin" do
     redirect to ("/winner")
   end
   @id_picker = rand(1..random_number).to_i
+  been_used << @id_picker
   while been_used.include? @id_picker
     @id_picker = rand(1..random_number).to_i
   end
@@ -81,6 +86,19 @@ get "/winner" do
   game_count = 0
   been_used = []
   lost = 0
+  
+  # put your own credentials here 
+  account_sid = 'ACee9f6a906bf3ecb52564efffcbf90418' 
+  auth_token = '04b586abce34e49a7fed2e1162a6ffd2' 
+ 
+  # set up a client to talk to the Twilio REST API 
+  @client = Twilio::REST::Client.new account_sid, auth_token 
+ 
+  @client.account.messages.create({
+  	:from => '+14026206953', 
+  	:to => '4028811036', 
+  	:body => 'You did it!',  
+  })
 erb :winner, :layout => :winner_boiler
 end
 
