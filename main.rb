@@ -96,7 +96,7 @@ get "/winner" do
  
   @client.account.messages.create({
   	:from => '+14026206953', 
-  	:to => '4028811036', 
+  	:to => '402xxxxxxx', 
   	:body => 'You did it!',  
   })
 erb :winner, :layout => :winner_boiler
