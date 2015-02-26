@@ -23,5 +23,10 @@ class Director
       redirect to ("/try_again")
     end
   end
+  
+  def set_array(array)
+    my_array = array
+  end
+  
 end
 
