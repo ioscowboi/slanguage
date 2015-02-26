@@ -154,10 +154,11 @@ p{
 }
 
 h1{
-	color: rgba(255,200,0, 1);
+	color: rgba(150, 200, 255, 1);
 	font-size: 75px;
 	font-weight: normal;
-	text-shadow: 7px 4px rgba(255,85,0, 1), 11px 10px 5px rgba(100,100,255, 1), 16px 10px 5px rgba(255,255,255, 1), 20px 10px 5px rgba(0,0,0, 1);;  
+	padding-top: 2px;
+	text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
 }
 
 h6{
@@ -338,14 +339,14 @@ input.button:hover, input.updatebutton:focus {
 			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 			box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 		}
-	
+		
 		h1{
 			max-width: 500px;
-			color: rgba(255,200,0, 1);
+			color: rgba(150, 200, 255, 1);
 			font-size: 42px;
 			font-weight: normal;
 			margin: 5px auto;
-			text-shadow: 2px 4px rgba(255,85,0, 1), 3px 5px 5px rgba(100,100,255, 1), 5px 5px 5px rgba(255,255,255, 1), 10px 5px 5px rgba(0,0,0, 1);  
+			text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
 		}
 		
 		img.main{
@@ -393,14 +394,15 @@ input.button:hover, input.updatebutton:focus {
 			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 			box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 		}
-	
+
+		
 		h1{
 			max-width: 1000px;
-			color: rgba(255,200,0, 1);
+			color: rgba(150, 200, 255, 1);
 			font-size: 57px;
 			font-weight: normal;
 			margin: 5px auto;
-			text-shadow: 2px 4px rgba(255,85,0, 1), 4px 5px 5px rgba(100,100,255, 1), 5px 5px 5px rgba(255,255,255, 1), 10px 5px 5px rgba(0,0,0, 1);  
+			text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
 		}
 		
 		img.main{
