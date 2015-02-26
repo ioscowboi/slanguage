@@ -45,7 +45,7 @@ li.normal{
 	list-style-type: square;
 	text-decoration: normal;
 	text-align: center;
-	color: rgba(150,150,150,.5);
+	color: rgba(255,200,0, 1);
 	margin: auto;
 	text-size: 90px;
 }
@@ -57,7 +57,7 @@ div{
 	text-align: center;
 	margin: auto;
 	line-height: 150%;
-	text-shadow: 3px 1px rgba(10,10,10, .9); 
+	text-shadow: 3px 1px rgba(100,100,255, .75), 4px 1px rgba(0,0,0, 1); 
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -85,7 +85,7 @@ div.navdiv{
 	max-width: 100%;
 	border: solid rgba(25,25,25,.00);
 	border-radius: 10px 10px 10px 10px;
-	background-color: rgba(200,200,200, .05);
+	background-color: rgba(200,200,200, .0);
 	text-align: center;
 	margin: auto;
 	line-height: 150%;
@@ -97,10 +97,11 @@ div.navdiv{
 div.tight{
 	border: solid rgba(25,25,25,.2);
 	border-radius: 10px 10px 10px 10px;
-	background-color: rgba(0,0,0, .4);
+	background-color: rgba(0,0,0, .65);
 	text-align: center;
 	margin: auto;
 	max-width: 800px;
+	max-height: 400px;
 	line-height: 150%;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -141,8 +142,8 @@ img{
 img.main{
 	padding-top: 3px;
 	margin-top: 10px;
-	max-width: 400px;
-	max-height: 400px;
+	max-width: 250px;
+	max-height: 250px;
 	border: solid rgba(255,255,255,.0);
 	border-radius: 25px 25px 25px 25px;
 }
@@ -154,9 +155,9 @@ p{
 
 h1{
 	color: rgba(255,200,0, 1);
-	font-size: 85px;
+	font-size: 75px;
 	font-weight: normal;
-	text-shadow: 7px 4px rgba(255,85,0, 1), 11px 10px 5px rgba(100,100,255, 1), 16px 10px 5px rgba(255,255,255, 1), 25px 10px 5px rgba(0,0,0, 1);;  
+	text-shadow: 7px 4px rgba(255,85,0, 1), 11px 10px 5px rgba(100,100,255, 1), 16px 10px 5px rgba(255,255,255, 1), 20px 10px 5px rgba(0,0,0, 1);;  
 }
 
 h6{
@@ -331,7 +332,7 @@ input.button:hover, input.updatebutton:focus {
 			border-radius: 10px 10px 10px 10px;
 			background-color: rgba(200,200,200, .05);
 			text-align: center;
-			margin: auto;
+			margin: 20px auto;
 			line-height: 150%;
 			-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -344,14 +345,69 @@ input.button:hover, input.updatebutton:focus {
 			font-size: 42px;
 			font-weight: normal;
 			margin: 5px auto;
-			text-shadow: 7px 4px rgba(255,85,0, 1), 2px 5px 5px rgba(100,100,255, 1), 5px 5px 5px rgba(255,255,255, 1), 10px 5px 5px rgba(0,0,0, 1);  
+			text-shadow: 2px 4px rgba(255,85,0, 1), 3px 5px 5px rgba(100,100,255, 1), 5px 5px 5px rgba(255,255,255, 1), 10px 5px 5px rgba(0,0,0, 1);  
 		}
 		
 		img.main{
 			padding-top: 3px;
 			margin-top: 10px;
+			max-width: 250px;
+			max-height: 250px;
+			border: solid rgba(255,255,255,.0);
+			border-radius: 25px 25px 25px 25px;
+		}
+		
+		div.tight{
+			border: solid rgba(25,25,25,.2);
+			border-radius: 10px 10px 10px 10px;
+			background-color: rgba(0,0,0, .65);
+			text-align: center;
+			margin: auto;
+			max-width: 800px;
+			line-height: 150%;
+			-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+			box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+  
+		}
+	}
+	
+	@media (min-width: 501px) and (max-width: 1024px) {
+		body{
+			font-family: 'Rock Salt', cursive;
+			background: url("/images/IMG_3166_ipad.jpg") no-repeat fixed;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			color: white;
+		}
+	
+		div.navdiv{
+			max-width: 100%;
+			border: solid rgba(25,25,25,.00);
+			border-radius: 10px 10px 10px 10px;
+			background-color: rgba(200,200,200, .05);
+			text-align: center;
+			margin: 30px auto;
+			line-height: 150%;
+			-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+			box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+		}
+	
+		h1{
+			max-width: 1000px;
+			color: rgba(255,200,0, 1);
+			font-size: 57px;
+			font-weight: normal;
+			margin: 5px auto;
+			text-shadow: 2px 4px rgba(255,85,0, 1), 4px 5px 5px rgba(100,100,255, 1), 5px 5px 5px rgba(255,255,255, 1), 10px 5px 5px rgba(0,0,0, 1);  
+		}
+		
+		img.main{
+			padding-top: 0px;
+			margin-top: 0	px;
 			max-width: 300px;
-			max-height: 300px;
+			max-height: 200px;
 			border: solid rgba(255,255,255,.0);
 			border-radius: 25px 25px 25px 25px;
 		}
