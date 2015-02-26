@@ -79,6 +79,9 @@ get "/begin" do
 end
 
 # validates the answer chosen by the player and redirects to the appropriate route handler:
+# redirects to /winner if the answer was correct
+# redirects to /game_over if 3 incorrect answers during a game
+# redirects to /try_again if the answer was incorrect, but there are less than 3 incorrect answers
 get "/validate" do
   @their_answer = params["answer"]
   if @their_answer.to_i == 1
@@ -94,18 +97,20 @@ get "/validate" do
     end
     redirect "/try_again"
   end
-  
-  erb :layout => :delay_boiler
+
 end
 
+# runs if there are less than 5 correct answers and the most recent answer was correct
 get "/correct" do
   erb :correct, :layout => :delay_boiler
 end
 
+# runs this route if incorrect answer was given and there are less than 3 incorrect answers during a game
 get "/try_again" do
   erb :try_again, :layout => :delay_boiler
 end
 
+# runss if the player has answered 5 choices correctly
 get "/winner" do
   #reset variables to zero
   game_count   = 0
@@ -118,6 +123,7 @@ get "/winner" do
   erb :winner, :layout => :winner_boiler
 end
 
+# runs if the player has refreshed the page a number of times that the game has run out of new challenges to display
 get "/play-again" do
   #reset variables to zero
   lost         = 0
@@ -126,6 +132,7 @@ get "/play-again" do
 erb :start_over, :layout => :restart_boiler
 end
 
+# runs if the player has submitted 3 incorrect choices 
 get "/game_over" do
   #reset variables to zero
   lost         = 0
@@ -137,6 +144,8 @@ get "/game_over" do
 
   erb :game_over, :layout => :game_over_boiler
 end
+
+# runs if the timer has expired for any round. This resets the game.
 
 get "/times_up" do
   #reset variables to zero

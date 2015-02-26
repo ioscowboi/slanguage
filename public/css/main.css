@@ -28,7 +28,6 @@ li{
 	display: inline;
 	list-style-type: none;
 	text-decoration: none;
-	padding: 10px;
 	text-align: center;
 	padding: 25px 25px 25px 25px;
 }
@@ -46,7 +45,7 @@ li.normal{
 	text-decoration: normal;
 	text-align: center;
 	color: rgba(255,200,0, 1);
-	margin: auto;
+	margin: 1px;
 	text-size: 90px;
 }
 
@@ -75,6 +74,7 @@ div.centerButton:hover{
 	margin: auto;
 	background-color: rgba(255,255,255,.70);
 }
+
 form{
 	font-family: 'Droid Serif', serif;
 	font-size: 30px;
@@ -87,7 +87,7 @@ div.navdiv{
 	border-radius: 10px 10px 10px 10px;
 	background-color: rgba(200,200,200, .0);
 	text-align: center;
-	margin: auto;
+	margin: auto 0px 0px 0px;
 	line-height: 150%;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -99,9 +99,9 @@ div.tight{
 	border-radius: 10px 10px 10px 10px;
 	background-color: rgba(0,0,0, .65);
 	text-align: center;
-	margin: auto;
+	margin: 0px auto 0px auto;
 	max-width: 800px;
-	max-height: 400px;
+	max-height: 375px;
 	line-height: 150%;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -155,7 +155,7 @@ p{
 
 h1{
 	color: rgba(150, 200, 255, 1);
-	font-size: 75px;
+	font-size: 55px;
 	font-weight: normal;
 	padding-top: 2px;
 	text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
@@ -345,8 +345,14 @@ input.button:hover, input.updatebutton:focus {
 			color: rgba(150, 200, 255, 1);
 			font-size: 42px;
 			font-weight: normal;
-			margin: 5px auto;
+			margin: 6px 0px 0px 0px;
 			text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
+		}
+		
+		h2{
+			color: rgba(200,200,200,1);
+			font-size: 14px;
+			font-weight: normal;
 		}
 		
 		img.main{
@@ -388,7 +394,7 @@ input.button:hover, input.updatebutton:focus {
 			border-radius: 10px 10px 10px 10px;
 			background-color: rgba(200,200,200, .05);
 			text-align: center;
-			margin: 30px auto;
+			margin: 30px 0px 0px 0px ;
 			line-height: 150%;
 			-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 			-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -399,17 +405,40 @@ input.button:hover, input.updatebutton:focus {
 		h1{
 			max-width: 1000px;
 			color: rgba(150, 200, 255, 1);
-			font-size: 57px;
+			font-size: 42px;
 			font-weight: normal;
-			margin: 5px auto;
+			margin: 6px 0px 0px 0px;
 			text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
+		}
+		
+		input.beginbutton{
+			margin: 0px 0px 0px 0px;
+			width:200px;
+			background: rgba(10,200,10, 1); /*the colour of the button*/
+			padding: 8px 14px 10px; /*apply some padding inside the button*/
+			border:1px solid rgba(200,10,10,.5); /*required or the default border for the browser will appear*/
+			cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+			/*style the text*/
+			font-size:.75em;
+			font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+			letter-spacing:.1em;
+			text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+			color: rgba(10,10,10,.5);
+			/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+			-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+			-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+			box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+			/*give the corners a small curve*/
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
 		}
 		
 		img.main{
 			padding-top: 0px;
 			margin-top: 0	px;
-			max-width: 300px;
-			max-height: 200px;
+			max-width: 275px;
+			max-height: 175px;
 			border: solid rgba(255,255,255,.0);
 			border-radius: 25px 25px 25px 25px;
 		}
