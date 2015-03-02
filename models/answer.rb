@@ -1,9 +1,12 @@
-# Public: Answer
+# Class: Answer
 # A class to get answer options to display to the player from the
 # answers table of the slanguage database.
 #
 # Attributes:
-# @id, @text, @cards_id, @correct_answer
+# @id             - the key in the database that ties an image location and answer choices to each other
+# @text           - a string from the database for either the image location or the answer choice to be displayed on webpage
+# @cards_id       - 
+# @correct_answer -
 #
 # Methods:
 # #initialize, #bad_choice_generator, #correct, #not_correct,
@@ -18,6 +21,19 @@ class Answer
     @cards_id = options["cards_id"]
     @correct_answer = options["correct_answer"]
   end
+  
+  # Public: #bad_choice_generator 
+    # This class method grabs three (3) bad choices from the database and turns them into an array of objects.
+    # 
+    # Parameters:
+    # id number (integer) chosen by the random number generator
+    #
+    # Returns:
+    # an array of objects
+    #
+    # State Changes:
+    # Inserts values into 'categories' table in the database as a new category
+    # record.
   
   def self.bad_choice_generator(id_picker)
     malo_choice = self.not_correct(id_picker)

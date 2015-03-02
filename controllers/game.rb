@@ -15,8 +15,8 @@ test_array     = []
 add_up         = 0
 
 (1..random_number).each do 
-  add_up += 1
-  test_array << add_up
+  add_up      += 1
+  test_array  << add_up
 end
 
 
@@ -91,10 +91,12 @@ get "/validate" do
     end
     redirect "/correct"
   else
-    lost += 1
-    if lost >= 3
+    lost      += 1
+    
+    if lost   >= 3
       redirect "/game_over"
     end
+    
     redirect "/try_again"
   end
 
@@ -110,13 +112,14 @@ get "/try_again" do
   erb :try_again, :layout => :delay_boiler
 end
 
-# runss if the player has answered 5 choices correctly
+# runs if the player has answered 5 choices correctly
 get "/winner" do
   #reset variables to zero
   game_count   = 0
   been_used    = []
   lost         = 0
   
+  #sends text message to the winner!
   text_message = Helper.new
   text_message.winner
   
@@ -139,6 +142,7 @@ get "/game_over" do
   game_count   = 0
   been_used    = []
   
+  #sends text message to encourage the player to try again
   text_message = Helper.new
   text_message.game_over
 
@@ -154,4 +158,8 @@ get "/times_up" do
   been_used   = []
   
 erb :times_up, :layout => :game_over_boiler
+end
+
+get "/test" do
+erb :test, :layout => :boilerplate
 end

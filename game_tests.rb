@@ -1,8 +1,17 @@
-require 'mini_test'
+require 'minitest/autorun'
+require_relative 'main.rb'
 
-def test_Answer_correct_method
-  #add enough data so that test has enough to work with
-  DATABASE.execute("INSERT INTO test_answers ")
-  a = Answer.correct(2)
-  assert_equal()
+class Game_Test < Minitest::Test
+
+# make sure card id matches the correct id# requested
+
+def test_card_id
+  @random = rand(1..10).to_i
+
+  @id_num = Card.grab_card(@random)
+  @correcto = Answer.correct(@random)
+
+  assert_equal @correcto[0].cards_id, @id_num[0].card_id
+end
+
 end

@@ -9,11 +9,12 @@
 # Methods:
 # #initialize, #grab_card
 class Card
-  attr_accessor :id, :location
+  attr_accessor :id, :location, :card_id
   
   def initialize(options)
     @id = options["id".to_i]
     @location = options["location"]
+    @card_id = options["card_id"]
   end
   
   def self.grab_card(id)
