@@ -183,6 +183,19 @@ h1{
 	text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
 }
 
+h2.ticker{
+	z-index: 2;
+	max-height: 25px;
+	max-width: 90px;
+	margin: auto;
+	size: 90px;
+	text-align: center;
+	color: rgba(255, 50, 50, 1);
+	border-radius: 10px 10px 0px 0px;
+	background-color: rgba(0,0,0, .5);
+	text-shadow: 3px 1px rgba(0,0,0, .75), 4px 1px rgba(0,0,0, 1), -4px 1px rgba(0,0,0, 1); 
+}
+
 h6{
 	color: rgba(200,200,200,1);
 	font-size: 16px;
