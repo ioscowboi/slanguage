@@ -16,7 +16,7 @@ class Answer
   attr_accessor :text, :cards_id, :correct_answer
   
   def initialize(options)
-    @id = options["id".to_i]
+    @id = options["id"].to_i
     @text = options["text"]
     @cards_id = options["cards_id"]
     @correct_answer = options["correct_answer"]
@@ -29,7 +29,7 @@ class Answer
     # id number (integer) chosen by the random number generator
     #
     # Returns:
-    # an array of objects
+    # an array of bad answer objects (ex: {"id" => 1, "cards_id" => 10, "text" => "too good to be true"})
     #
     # State Changes:
     # Inserts values into 'categories' table in the database as a new category
@@ -62,11 +62,11 @@ class Answer
     
     results = DATABASE.execute("SELECT * FROM answers WHERE cards_id = #{id_num}
                                 AND correct_answer = 1")
-    
+                                
     results_as_objects = []
     
     results.each do |r|
-      results_as_objects << self.new(r)
+       results_as_objects << self.new(r)
     end
     
     results_as_objects
@@ -104,6 +104,5 @@ class Answer
     
     results_as_objects
   end
-  
 
 end

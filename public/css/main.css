@@ -57,6 +57,7 @@ li.normal{
 	text-size: 200px;
 }
 
+
 div{
 	border: solid rgba(25,25,25,.2);
 	border-radius: 10px 10px 10px 10px;
@@ -122,7 +123,7 @@ div.tight{
 	background-color: rgba(0,0,0, .65);
 	text-align: center;
 	margin: 0px auto 0px auto;
-	max-width: 800px;
+	max-width: 500px;
 	max-height: 375px;
 	line-height: 150%;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -170,6 +171,7 @@ img.main{
 	border-radius: 25px 25px 25px 25px;
 }
 
+
 p{
 
 	padding: 10px 75px 5px 75px;
@@ -181,10 +183,71 @@ h1{
 	font-weight: normal;
 	padding-top: 2px;
 	text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
+	-webkit-animation-name: trickery;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: trickery;
+	-moz-animation-duration: 4s;
+	-moz-animation-timing-function: linear;
+	-0-animation-name: trickery;
+	-0-animation-duration: 4s;
+	-0-animation-timing-function: linear;
+	animation-name: trickery;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+    -webkit-animation: mySecond 5s; /* Chrome, Safari, Opera */
+	animation: mySecond 5s;
 }
 
+h1:hover {
+	color: rgba(100, 150, 255, 1);
+		-ms-transform: rotate(1deg); /* IE 9 */
+	    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+	    transform: rotate(1deg);
+	    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+	    animation: myfirst 5s;
+		
+	}
+	
+	
+	h2:hover {
+			-ms-transform: rotate(1deg) ease-in; /* IE 9 */
+		    -webkit-transform: rotate(1deg) ease-in; /* Chrome, Safari, Opera */
+		    transform: rotate(1deg) ease-in;
+			-ms-transform: scale(1.1); /* IE 9 */
+		    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+		    transform: scale(1.1);
+		}
+		
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes myfirst {
+			from {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+			to {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(100,0,0, .5), 1px 2px 5px rgba(100,0,0, .5), 0px -2px 5px rgba(0,255,0, 1), -5px 4px rgba(242, 181, 155, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(242, 10, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(0,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		}
+
+		/* Standard syntax */
+		@keyframes mySecond {
+			from {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+			to {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(100,0,0, .5), 1px 2px 5px rgba(100,0,0, .5), 0px -2px 5px rgba(0,255,0, 1), -5px 4px rgba(242, 181, 155, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(242, 10, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(0,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		}
+
+		/* Chrome, Safari, Opera */
+		@-webkit-keyframes mySecond {
+		    0%   {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    25%  {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,255,0, 1), 1px 2px 5px rgba(255,0,0, 1), 0px -2px 5px rgba(0,50,0, 1), -5px 4px rgba(242, 181, 255, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(0, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(0, 181, 15, 1), 9px 10px 5px rgba(255,0, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    50%  {text-shadow: 0px 2px 5px rgba(255,255,255, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,255,0, 1), 0px -2px 5px rgba(200,0,0, 1), -5px 4px rgba(242, 100, 100, 1), 5px 10px 5px rgba(0, 181, 15, 1), 7px 5px 5px rgba(242, 255, 15, 1), -7px -5px 5px rgba(242, 181, 255, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(0,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    100% {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(100,0,0, .5), 1px 2px 5px rgba(100,0,0, .5), 0px -2px 5px rgba(0,255,0, 1), -5px 4px rgba(242, 181, 155, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(242, 10, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(0,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		}
+
+		/* Standard syntax */
+		@keyframes mySecond {
+		    0%   {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    25%  {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,255,0, 1), 1px 2px 5px rgba(255,0,0, 1), 0px -2px 5px rgba(0,50,0, 1), -5px 4px rgba(242, 181, 255, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(0, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(0, 181, 15, 1), 9px 10px 5px rgba(255,0, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    50%  {text-shadow: 0px 2px 5px rgba(255,255,255, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,255,0, 1), 0px -2px 5px rgba(200,0,0, 1), -5px 4px rgba(242, 100, 100, 1), 5px 10px 5px rgba(0, 181, 15, 1), 7px 5px 5px rgba(242, 255, 15, 1), -7px -5px 5px rgba(242, 181, 255, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(0,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		    100% {text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(100,0,0, .5), 1px 2px 5px rgba(100,0,0, .5), 0px -2px 5px rgba(0,255,0, 1), -5px 4px rgba(242, 181, 155, 1), 5px 10px 5px rgba(242, 181, 255, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 0, 15, 1), -5px -10px 5px rgba(242, 10, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(0,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);}
+		}
+		
 h2.ticker{
-	z-index: 2;
 	max-height: 25px;
 	max-width: 90px;
 	margin: auto;
@@ -192,7 +255,7 @@ h2.ticker{
 	text-align: center;
 	color: rgba(255, 50, 50, 1);
 	border-radius: 10px 10px 0px 0px;
-	background-color: rgba(0,0,0, .5);
+	background-color: rgba(0,0,0, .0);
 	text-shadow: 3px 1px rgba(0,0,0, .75), 4px 1px rgba(0,0,0, 1), -4px 1px rgba(0,0,0, 1); 
 }
 
@@ -530,3 +593,15 @@ input.button:hover, input.updatebutton:focus {
 		text-align:center; 
 		font-weight:bold; 
 	} 
+
+	
+	@viewport{
+		zoom: 1.0;
+		width: extend-to-zoom;
+	}
+
+	@-ms-viewport{
+		width: extend-to-zoom;
+		zoom: 1.0;
+	}
+	

@@ -17,7 +17,7 @@
 <html>
 
 <head>
-  <meta http-equiv="refresh" CONTENT="10;URL=/times_up">
+  <meta http-equiv="refresh" CONTENT="20;URL=/times_up">
   <title>Slanguage :: The game to test your language swag</title>
 
   <link rel="stylesheet" href='/css/main.css'>
@@ -30,9 +30,11 @@
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
 
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
 <script LANGUAGE="JavaScript">
 <!--
-var count=10;
+var count=20;
 
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
@@ -49,13 +51,14 @@ function timer()
 }
 
 // --></script>
+
 </head>
 
 <body>
 
 </div>
 <div class="navdiv">
-<h1>SLANGUAGE</h1></div>
+<h1 class="tricks">SLANGUAGE</h1></div>
 </br>
 <h2 class="ticker" id="timer" style="color: red"></h2>
     <div>
@@ -69,8 +72,15 @@ function timer()
       <input class ="navbutton" type="submit" value="Quit Game" onclick="goHome()" /></div>
 </br>
 </br>
-</body>
 
+<script LANGUAGE="JavaScript">
+function blinker() {
+    $('.ticker').fadeOut(250);
+    $('.ticker').fadeIn(150);
+}
+
+setInterval(blinker, 1050);
+</script>
 
 <script type="text/javascript">
 function goBack () {
@@ -78,6 +88,8 @@ history.go(-1);
 return false;
 }
 </script>
+</body>
+
   
 <script type="text/javascript">
 function goHome () {
@@ -115,4 +127,6 @@ function Countdown(options) {
   };
 }
 </script>
+
+
 </html>
