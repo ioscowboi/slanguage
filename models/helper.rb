@@ -25,9 +25,15 @@ class Helper
     })
   end
   
-  def login(options)
+  def login(*splat)
+    binding.pry
     user_name = options[@user]
     password = options[@pass]
+    db_userName = options[@person.username]
+    db_password = options[@person.password]
+    if user_name == db_userName && password == db_password
+      binding.pry
+    end
     session[:person]<< @user.id
     flash[:notice] = "Welcome!"
   end

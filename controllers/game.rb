@@ -25,9 +25,11 @@ end
 get "/submit" do
   @user = params[:user]
   @pass = params[:password]
-  person = Player.where(username: @user)
-  person = person[0]
-  Helper.login(@user, @pass)
+  @person = Player.where(username: @user)
+  @person = @person[0]
+  binding.pry
+  validate = Helper.new
+  validate = validate.login(@user, @pass, @person)
   redirect ("/")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
