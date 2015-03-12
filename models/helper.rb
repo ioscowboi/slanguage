@@ -25,6 +25,13 @@ class Helper
     })
   end
   
+  def login(options)
+    user_name = options[@user]
+    password = options[@pass]
+    session[:person]<< @user.id
+    flash[:notice] = "Welcome!"
+  end
+  
   def game_over
     # put your own credentials here 
     account_sid  = 'ACee9f6a906bf3ecb52564efffcbf90418' 

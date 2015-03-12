@@ -5,6 +5,8 @@
 # been_used array keeps track of the database id's that have been used.
 # test_array is an array gathers all the possible id's for the game, and compares itself to the "been_used" array to see if
 # game needs to be reset. This occurs if the player has cycled through all the possible choices before winner/loser is determined.
+
+
 random_number  = 10
 game_count     = 0
 lost           = 0
@@ -20,6 +22,14 @@ add_up         = 0
 end
 
 
+get "/submit" do
+  @user = params[:user]
+  @pass = params[:password]
+  person = Player.where(username: @user)
+  person = person[0]
+  Helper.login(@user, @pass)
+  redirect ("/")
+end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
 get "/begin" do
   #max_shuffler is the random number of times (renewed after each round of play) that the 4 answers will be shuffled
