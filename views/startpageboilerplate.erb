@@ -1,17 +1,3 @@
-<!-- 
-# Public: BOILERPLATE.erb
-# A template to display around all user interaction on the front-end.
-#
-# Attributes:
-# none
-#
-# Methods:
-# none 
-#
-# Attributes:
-# none
-#
--->
 
 <!DOCTYPE html>
 <html>
@@ -38,6 +24,27 @@
 <div class="navdiv">
 <h1>SLANGUAGE</h1></div>
 </br>
+
+   <div id="loginScreen"> <a href="#" class="cancel">&times;</a>
+   <div>
+       <p>Sign Up</p>
+
+    <form>
+      username:
+      <br/>
+      <input type="text" name="user"></input>
+      <br/>
+      password:
+      <br/>
+      <input type="text" name="password"></input>
+      <br/><br/>
+      <a href="#" class ="popUpButton" type="submit" value="Submit">Submit</a></div>
+    </form>
+     </div>
+   </div>
+   <div id="cover" >
+ </div>
+
     <div class='tight'>
 
   <a href=""><img class="main" src="/images/collage.png"></a>
@@ -49,10 +56,16 @@
   <div class="navdiv">
     
       <input class ="beginbutton" type="submit" value=" Begin " onclick="goHome()" /></div>
+      
 </br>
 </br>
 </body>
 
+      <script>
+      function newDoc() {
+          window.location.assign("/")
+      };
+      </script>
 <script type="text/javascript">date_populate("date", "month", "year");</script>
 <script type="text/javascript">
 function goBack () {

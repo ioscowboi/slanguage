@@ -1,4 +1,15 @@
 class Helper
+  # include BCrypt
+  #
+  # def password
+  #   @password ||= Password.new(password_hash)
+  # end
+  #
+  # def password=(new_password)
+  #   @password = Password.create(new_password)
+  #   self.password_hash = @password
+  # end
+    
   def winner
     # put your own credentials here 
     account_sid = 'ACee9f6a906bf3ecb52564efffcbf90418' 
@@ -28,4 +39,5 @@ class Helper
     	:body => 'You were so close! Come back and play again. -Slanguage',  
     })
   end
+
 end
