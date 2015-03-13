@@ -9,7 +9,7 @@ class Helper
   #   @password = Password.create(new_password)
   #   self.password_hash = @password
   # end
-    
+
   def winner
     # put your own credentials here 
     account_sid = 'ACee9f6a906bf3ecb52564efffcbf90418' 
@@ -26,16 +26,17 @@ class Helper
   end
   
   def login(*splat)
-    binding.pry
-    user_name = options[@user]
-    password = options[@pass]
-    db_userName = options[@person.username]
-    db_password = options[@person.password]
+    user_name = splat[0]
+    password = splat[1]
+    db_userName = splat[2].username
+    db_password = splat[2].password
+    valid = ''
     if user_name == db_userName && password == db_password
-      binding.pry
+      valid = true
+    else
+      valid = false
     end
-    session[:person]<< @user.id
-    flash[:notice] = "Welcome!"
+    valid
   end
   
   def game_over

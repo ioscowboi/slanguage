@@ -6,6 +6,9 @@
 # test_array is an array gathers all the possible id's for the game, and compares itself to the "been_used" array to see if
 # game needs to be reset. This occurs if the player has cycled through all the possible choices before winner/loser is determined.
 
+# Enabling sessions to track users login information
+enable :sessions
+
 
 random_number  = 10
 game_count     = 0
@@ -21,16 +24,28 @@ add_up         = 0
   test_array  << add_up
 end
 
+# session[:person]<< @person.id
+# flash[:notice] = "Welcome!"
 
 get "/submit" do
   @user = params[:user]
   @pass = params[:password]
   @person = Player.where(username: @user)
   @person = @person[0]
-  binding.pry
   validate = Helper.new
   validate = validate.login(@user, @pass, @person)
-  redirect ("/")
+  if validate == true
+    session[:id]= @person.id
+    session[:name]= @person.name
+    redirect ("/welcome/#{@person.id}")
+  else
+    redirect ("/")
+  end
+end
+
+get "/welcome/*" do
+  @active_player = session[:name]
+  erb :page2, :layout => :startpageboilerplate
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
 get "/begin" do
