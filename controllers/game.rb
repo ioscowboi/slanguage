@@ -32,20 +32,27 @@ get "/submit" do
   @pass = params[:password]
   @person = Player.where(username: @user)
   @person = @person[0]
+  if @person == nil
+    redirect ("/signup/#{@user}")
+  end
   validate = Helper.new
   validate = validate.login(@user, @pass, @person)
   if validate == true
     session[:id]= @person.id
     session[:name]= @person.name
     redirect ("/welcome/#{@person.id}")
-  else
-    redirect ("/")
   end
 end
 
 get "/welcome/*" do
   @active_player = session[:name]
   erb :page2, :layout => :startpageboilerplate
+end
+
+get "/signup/*" do
+  @new_username = params[:splat]
+  @new_username = @new_username[0]
+  erb :signup
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
 get "/begin" do

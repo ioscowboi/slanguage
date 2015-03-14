@@ -78,20 +78,6 @@ div{
   background-color: rgba(0,0,0, .0);
   border: none;
   position: relative;
-	-webkit-animation-name: trickery;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: linear;
-	-moz-animation-name: trickery;
-	-moz-animation-duration: 1s;
-	-moz-animation-timing-function: linear;
-	-0-animation-name: trickery;
-	-0-animation-duration: 1s;
-	-0-animation-timing-function: linear;
-	animation-name: trickery;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-    -webkit-animation: mySecond 1s; /* Chrome, Safari, Opera */
-	animation: mySecond 1s;
   margin: 85px auto;
 }
 div.transparent{
@@ -374,7 +360,7 @@ input.navbutton:hover, input.navbutton:focus{
 }
 
 .popUpButton{
-	margin: 200px auto;
+	margin: 20px 0px 0px 0px;
 	width:200px;
 	background: rgba(10,200,10, 1); /*the colour of the button*/
 	padding: 8px 14px 10px; /*apply some padding inside the button*/
@@ -520,6 +506,10 @@ input.button:hover, input.updatebutton:focus {
 			box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
   
 		}
+    
+    #loginButton{
+      margin-top: 130px;
+    }
 	}
 	
 	@media (min-width: 501px) and (max-width: 1024px) {
@@ -586,6 +576,10 @@ input.button:hover, input.updatebutton:focus {
 			border: solid rgba(255,255,255,.0);
 			border-radius: 25px 25px 25px 25px;
 		}
+    
+    #loginButton{
+      margin-top: 130px;
+    }
 	}
 	
 	.signup { 
@@ -596,10 +590,6 @@ input.button:hover, input.updatebutton:focus {
 		box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2); 
 		font-weight:bold; 
 		text-decoration:none;
-    -webkit-transition: all 5s ease-in-out;
-    -moz-transition: all 5s ease-in-out;
-    -o-transition: all 5s ease-in-out;
-    transition: all 5s ease-in-out; 
 	} 
 		
 	#cover{ 
