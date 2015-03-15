@@ -78,7 +78,7 @@ div{
   background-color: rgba(0,0,0, .0);
   border: none;
   position: relative;
-  margin: 85px auto;
+  margin: 10px auto;
 }
 div.transparent{
 	border: solid rgba(25,25,25,.0);
@@ -588,7 +588,7 @@ input.button:hover, input.updatebutton:focus {
 		}
     
     #loginButton{
-      margin-top: 130px;
+      margin-top: 0px;
     }
 	}
 	
@@ -658,7 +658,7 @@ input.button:hover, input.updatebutton:focus {
 		}
     
     #loginButton{
-      margin-top: 130px;
+      margin-top: 20px;
     }
 	}
 	
