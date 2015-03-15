@@ -39,7 +39,7 @@ li a{
 
 p.wrapit{
 	float: right;
-	margin: auto;
+	margin: 0px;
 	background-color: rgba(0px, 0px, 0px, .0);
 	clear: both;
 }
@@ -179,10 +179,10 @@ img.main{
 }
 
 
-p{
+/*p{
 
-	padding: 10px 75px 5px 75px;
-}
+  padding: 10px 75px 5px 75px;
+}*/
 
 h1{
 	color: rgba(150, 200, 255, 1);
@@ -382,6 +382,86 @@ input.navbutton:hover, input.navbutton:focus{
 	border-radius: 10px;
   
 }
+
+#proper{
+  font-size: 160%;
+  width: 300px;
+  height: 40px;
+  background-color:rgba(0,200,0,1); 
+  color:white; 
+  border-radius:10px 10px 10px 10px; 
+  margin: auto;
+  padding-top: 10px;
+  text-decoration: none;
+  
+}
+
+#proper.hover{
+  color:blue; 
+  text-decoration: none;
+}
+
+#proper a:visited{
+  color: white;
+}
+
+#goBacker{
+  font-family:Oswald, sans-serif;
+  color: white;
+  background-color: rgba(0,0,0,.0);
+  border: none;
+	text-shadow: 0px 2px 5px rgba(0,0,0, 1), -1px 2px 5px rgba(0,0,0, 1), 1px 2px 5px rgba(0,0,0, 1), 0px -2px 5px rgba(0,0,0, 1), -5px 4px rgba(242, 181, 15, 1), 5px 10px 5px rgba(242, 181, 15, 1), 7px 5px 5px rgba(242, 181, 15, 1), -7px -5px 5px rgba(242, 181, 15, 1), -5px -10px 5px rgba(242, 181, 15, 1), 9px 10px 5px rgba(255,255, 255, 1), -9px -8px 5px rgba(255,255, 255, 1), 11px 10px 5px rgba(0,0,0, 1);  
+  
+}
+
+#goBacker a:visited{
+  color: white;
+}
+
+#goBacker a:hover{
+  color: rgba(0,255,50, 1);
+}
+
+#active_player{
+  font-family:Oswald, sans-serif;
+}
+a:link{
+  text-decoration: none;
+}
+.signUpButton{
+	margin: 60px 0px 0px 0px;
+	width:200px;
+	background: rgba(10,200,10, 1); /*the colour of the button*/
+	padding: 8px 14px 10px; /*apply some padding inside the button*/
+	border:1px solid rgba(200,10,10,.5); /*required or the default border for the browser will appear*/
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	/*style the text*/
+	font-size:.75em;
+	font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+	letter-spacing:.1em;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give the text a shadow - doesn't appear in Opera 12.02 or earlier*/
+	color: rgba(10,10,10,.5);
+	/*use box-shadow to give the button some depth - see cssdemos.tupence.co.uk/box-shadow.htm#demo7 for more info on this technique*/
+	-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+	/*give the corners a small curve*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+  
+}
+
+input{
+  border-radius: 5px 5px 5px 5px;
+  width: 50%;
+  color: rgba(70,90,150,1);
+  font-size: 15px;
+  background-color: rgba(255,255,255, .9);
+
+}
+
+
 input.beginbutton{
 	margin: auto;
 	width:200px;
@@ -450,7 +530,7 @@ input.button:hover, input.updatebutton:focus {
 	@media (max-width: 500px) {
 		body{
 			font-family: 'Rock Salt', cursive;
-			background: url("/images/IMG_3166_iphone5.jpg") no-repeat fixed;
+			background: url("/images/IMG_3166_iphone52.jpg") no-repeat fixed;
 			background-size: 100%;
 			background-repeat: no-repeat;
 			color: white;
@@ -515,7 +595,7 @@ input.button:hover, input.updatebutton:focus {
 	@media (min-width: 501px) and (max-width: 1024px) {
 		body{
 			font-family: 'Rock Salt', cursive;
-			background: url("/images/IMG_3166_ipad.jpg") no-repeat fixed;
+			background: url("/images/IMG_3166_ipad2.jpg") no-repeat fixed;
 			background-size: 100%;
 			background-repeat: no-repeat;
 			color: white;

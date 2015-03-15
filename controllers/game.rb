@@ -54,6 +54,12 @@ get "/signup/*" do
   @new_username = @new_username[0]
   erb :signup
 end
+
+get "/enter" do
+  binding.pry
+  @person = 'persons_name'
+  redirect ("/welcome/#{@person}")
+end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
 get "/begin" do
   #max_shuffler is the random number of times (renewed after each round of play) that the 4 answers will be shuffled
