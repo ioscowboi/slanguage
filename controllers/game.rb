@@ -67,7 +67,7 @@ get "/enter" do
   @person = params[:user]
   @all_info = params
   Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
-  sess[:name]= params[:name]
+  session[:name]= params[:name]
   redirect ("/welcome/#{@person}")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
