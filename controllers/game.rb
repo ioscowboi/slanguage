@@ -57,14 +57,17 @@ get "/welcome/*" do
 end
 
 get "/signup/*" do
+  session[:id]= nil
   @new_username = params[:splat]
   @new_username = @new_username[0]
   erb :signup
 end
 
 get "/enter" do
-  binding.pry
-  @person = 'persons_name'
+  @person = params[:user]
+  @all_info = params
+  Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
+  sess[:name]= params[:name]
   redirect ("/welcome/#{@person}")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]

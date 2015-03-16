@@ -140,6 +140,23 @@ div.tight{
   position: relative;
 }
 
+div.signupform{
+	border: solid rgba(25,25,25,.2);
+	border-radius: 10px 10px 10px 10px;
+	background-color: rgba(0,0,0, .65);
+	text-align: right;
+	margin: 0px auto 0px auto;
+  padding: 0px 120px 0px 0px;
+	max-width: 500px;
+	max-height: 375px;
+	line-height: 150%;
+	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+	box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
+  position: relative;
+  
+}
+
 div.tightdark{
 	border: solid rgba(25,25,25,.2);
 	border-radius: 10px 10px 10px 10px;
