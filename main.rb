@@ -8,8 +8,8 @@ require 'sinatra/activerecord'
 
 # API implementation requires twilio-ruby
 require 'twilio-ruby' 
-
-# require 'rack-flash'
+#
+# require 'sinatra-flash'
 
 # Here, we create the actual database if it's not created yet.
 # Otherwise, it will simply load the existing database: 
