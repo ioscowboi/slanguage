@@ -21,7 +21,7 @@ class Helper
     @client.account.messages.create({
     	:from => '+14026206953', 
     	:to => '4028811036', 
-    	:body => "You did it \"#{name}\"! You won the game! -Slanguage",  
+    	:body => "You did it\, #{name}! You won the game! -Slanguage",  
     })
   end
   
@@ -45,18 +45,18 @@ class Helper
     valid
   end
   
-  def game_over
+  def game_over(their_name)
     # put your own credentials here 
     account_sid  = 'ACee9f6a906bf3ecb52564efffcbf90418' 
     auth_token   = '04b586abce34e49a7fed2e1162a6ffd2' 
- 
+    name = their_name
     # set up a client to talk to the Twilio REST API 
     @client      = Twilio::REST::Client.new account_sid, auth_token 
  
     @client.account.messages.create({
     	:from => '+14026206953', 
     	:to => '4028811036', 
-    	:body => 'You were so close! Come back and play again. -Slanguage',  
+    	:body => "You were so close\, #{name}! Come back and play again. -Slanguage",  
     })
   end
 

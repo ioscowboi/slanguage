@@ -39,7 +39,7 @@ li a{
 
 p.wrapit{
 	float: right;
-	margin: 0px;
+	margin: 0px auto 0px auto;
 	background-color: rgba(0px, 0px, 0px, .0);
 	clear: both;
 }
@@ -409,8 +409,8 @@ input.navbutton:hover, input.navbutton:focus{
   background-color:rgba(0,200,0,1); 
   color:white; 
   border-radius:10px 10px 10px 10px; 
-  margin: auto;
-  padding-top: 10px;
+  margin: 0px auto;
+  padding-top: 20px;
   text-decoration: none;
   
 }

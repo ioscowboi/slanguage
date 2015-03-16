@@ -1,17 +1,36 @@
-
-<h2>To Win:</h2>
+<% if @logged_in == nil %>
+<%= "<h2>To Win:</h2>" %>
+<% else %>
+<%= "<h2>#{@name}, to win:</h2>" %>
+<% end %>
 <p class='wrapit'>
 	<ul>
   <li class='normal'>-study the image</li>
 </br>
-  <li class='normal'>-choose 5 correct answers in a row</li>
+  <li class='normal'>-answer 5 correct before 3 incorrect answers occur</li>
 </ul>
-<h4>not a member?</h4> <br/><br/>
+
+          <% if @logged_in == nil %>
+          <%= "<h4>not a member?</h4>"%>
+          <% else %>
+          <%=  "<h4>ready to play?</h4>" %>
+            <% end %>
+<br/><br/>
 </p>
-<h4 id="proper"><a href="/signup/sign_up">sign up</a><h4/>
+
+          <% if @logged_in == nil %>
+          <%= "<h4 id='proper'><a href='/signup/sign_up'>sign up</a><h4/>" %>
+          <% else %>
+          <%= "<h4 id='proper'><a href='/begin'>Play Now</a><h4/>"%>
+            <% end %>
+
 <!--this will be the pop up box to sign in. not yet though! all the code is there for the popup, you just haven't learned
 sessions yet -->
-   <div id="loginButton"><a href="#loginScreen" class="signup">Click here to Log In</a>
-   </div>
+            <% if @logged_in == nil %>
+<%= "   <div id='loginButton'><a href='#loginScreen' class='signup'>Click here to Log In</a>
+   </div>" %>
+   <% else %>
+   <%= "<div id='loginButton'><a href='/sign_out' class='signup'>sign out</a>" %>
+   <% end %>
    
 

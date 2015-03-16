@@ -56,6 +56,8 @@ end
 
 get "/welcome/*" do
   @active_player = session[:name]
+  @active_id     = session[:id]
+  
   erb :page2, :layout => :startpageboilerplate
 end
 
@@ -63,6 +65,7 @@ get "/signup/*" do
   session[:id]= nil
   @new_username = params[:splat]
   @new_username = @new_username[0]
+  
   erb :signup
 end
 
@@ -129,8 +132,8 @@ get "/begin" do
   end
   
   max_shuffler.times { @all_choices.shuffle! }
+  
   erb :start_game, :layout => :boilerplate #find the erb file in views/welcome.erb and return it
-
 end
 
 # validates the answer chosen by the player and redirects to the appropriate route handler:
@@ -159,23 +162,23 @@ end
 
 # runs if there are less than 5 correct answers and the most recent answer was correct
 get "/correct" do
+  
   erb :correct, :layout => :delay_boiler
 end
 
 # runs this route if incorrect answer was given and there are less than 3 incorrect answers during a game
 get "/try_again" do
+  
   erb :try_again, :layout => :delay_boiler
 end
 
 # runs if the player has answered 5 choices correctly
 get "/winner" do
-  
   @winner = session[:name]
   #reset variables to zero
   game_count   = 0
   been_used    = []
   lost         = 0
-  
   #sends text message to the winner!
   text_message = Helper.new
   text_message.winner(@winner)
@@ -189,7 +192,8 @@ get "/play-again" do
   lost         = 0
   game_count   = 0
   been_used    = []
-erb :start_over, :layout => :restart_boiler
+  
+  erb :start_over, :layout => :restart_boiler
 end
 
 # runs if the player has submitted 3 incorrect choices 
@@ -198,10 +202,10 @@ get "/game_over" do
   lost         = 0
   game_count   = 0
   been_used    = []
-  
+  @not_winner  = session[:name]
   #sends text message to encourage the player to try again
   text_message = Helper.new
-  text_message.game_over
+  text_message.game_over(@not_winner)
 
   erb :game_over, :layout => :game_over_boiler
 end
@@ -214,9 +218,20 @@ get "/times_up" do
   game_count  = 0
   been_used   = []
   
-erb :times_up, :layout => :game_over_boiler
+  erb :times_up, :layout => :game_over_boiler
 end
 
 get "/test" do
-erb :test, :layout => :boilerplate
+  
+  erb :test, :layout => :boilerplate
+end
+
+get "/sign_out" do
+  @username = session[:name]
+  @user_id   = session[:id]
+  @logout_validator = session[:id]
+  session[:name]= nil
+  session[:id]= nil
+
+  erb :signed_out, :layout => :game_over_boiler
 end
