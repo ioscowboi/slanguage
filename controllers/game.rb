@@ -50,7 +50,7 @@ get "/submit" do
     session[:name]= @db_info.name
     redirect ("/welcome/#{@db_info.id}")
   else
-    redirect ('/')
+    redirect ('/#loginScreeninvalid')
   end
 end
 
@@ -169,6 +169,8 @@ end
 
 # runs if the player has answered 5 choices correctly
 get "/winner" do
+  
+  @winner = session[:name]
   #reset variables to zero
   game_count   = 0
   been_used    = []
@@ -176,7 +178,7 @@ get "/winner" do
   
   #sends text message to the winner!
   text_message = Helper.new
-  text_message.winner
+  text_message.winner(@winner)
   
   erb :winner, :layout => :winner_boiler
 end
