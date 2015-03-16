@@ -30,6 +30,8 @@
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
 
+<script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
+
  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 <script LANGUAGE="JavaScript">
@@ -69,7 +71,7 @@ function timer()
   </div>
   <div class="navdiv">
     
-      <input class ="navbutton" type="submit" value="Quit Game" onclick="goHome()" /></div>
+      <input class ="navbutton" type="submit" value="Quit Game" onclick="startOver()" /></div>
 </br>
 </br>
 
@@ -94,6 +96,13 @@ return false;
 <script type="text/javascript">
 function goHome () {
 window.location = '/'; 
+return false;
+}
+</script>
+
+<script type="text/javascript">
+function startOver () {
+window.location = '/welcome/'; 
 return false;
 }
 </script>

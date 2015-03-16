@@ -27,6 +27,13 @@ end
 # session[:person]<< @person.id
 # flash[:notice] = "Welcome!"
 
+before "/begin" do
+  if session[:id] == nil
+    redirect ('/')
+  end
+
+end
+
 get "/submit" do
   @user = params[:user]
   @pass = params[:password]
