@@ -37,17 +37,20 @@ end
 get "/submit" do
   @user = params[:user]
   @pass = params[:password]
-  @person = Player.where(username: @user)
-  @person = @person[0]
-  if @person == nil
+  @db_info = Player.where(username: @user)
+  @db_info = @db_info[0]
+  if @db_info == nil
     redirect ("/signup/#{@user}")
   end
   validate = Helper.new
-  validate = validate.login(@user, @pass, @person)
+  validate = validate.login(@user, @pass, @db_info)
+  
   if validate == true
-    session[:id]= @person.id
-    session[:name]= @person.name
-    redirect ("/welcome/#{@person.id}")
+    session[:id]= @db_info.id
+    session[:name]= @db_info.name
+    redirect ("/welcome/#{@db_info.id}")
+  else
+    redirect ('/')
   end
 end
 
@@ -68,9 +71,8 @@ get "/enter" do
   @all_info = params
   params[:password] = BCrypt::Password.create(params["password"])
   profile = Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
-  binding.pry
-  
-  session[:name]= params[:name]
+  session[:id] = profile.id
+  session[:name]= profile.name
   redirect ("/welcome/#{@person}")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]

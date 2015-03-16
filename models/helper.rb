@@ -27,11 +27,17 @@ class Helper
   
   def login(*splat)
     user_name = splat[0]
-    password = splat[1]
+    password_entered_by_user = splat[1]
     db_userName = splat[2].username
     db_password = splat[2].password
     valid = ''
-    if user_name == db_userName && password == db_password
+    valid_password = ''
+    
+    if BCrypt::Password.new(db_password) == password_entered_by_user
+      valid_password = true
+    end
+
+    if user_name == db_userName && valid_password == true
       valid = true
     else
       valid = false
