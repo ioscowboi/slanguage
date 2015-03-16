@@ -66,7 +66,10 @@ end
 get "/enter" do
   @person = params[:user]
   @all_info = params
-  Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
+  params[:password] = BCrypt::Password.create(params["password"])
+  profile = Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
+  binding.pry
+  
   session[:name]= params[:name]
   redirect ("/welcome/#{@person}")
 end

@@ -4,6 +4,8 @@ require 'rubygems'
 # Initialize and enable our program to run SQLITE3 : 
 require 'sqlite3'
 
+require 'bcrypt'
+
 require 'sinatra/activerecord'
 
 # API implementation requires twilio-ruby
