@@ -118,7 +118,7 @@ div.navdiv{
 	border-radius: 10px 10px 10px 10px;
 	background-color: rgba(200,200,200, .0);
 	text-align: center;
-	margin: auto 0px 0px 0px;
+	margin: auto;
 	line-height: 150%;
 	-webkit-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
 	-moz-box-shadow: inset 0px 1px 0px rgba(200,200,200, .8), 0px 10px 0px 0px rgb(240,240,240, .8), 0px 10px 5px #999;
@@ -157,6 +157,7 @@ div.tightdark{
 div.align_stuff_left{
 	text-align: left;
 	max-width: 500px;
+
 }
 
 input.centerbutton{
@@ -180,10 +181,10 @@ img.main{
 }
 
 
-/*p{
+p{
 
   padding: 10px 75px 5px 75px;
-}*/
+}
 
 h1{
 	color: rgba(150, 200, 255, 1);
@@ -453,7 +454,7 @@ a:link{
   
 }
 
-input{
+input.sighnUp{
   border-radius: 5px 5px 5px 5px;
   width: 50%;
   color: rgba(70,90,150,1);
