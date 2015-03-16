@@ -1,4 +1,4 @@
-require 'sinatra'
+require 'sinatra' 
 require 'pry'
 require 'rubygems'
 # Initialize and enable our program to run SQLITE3 : 
@@ -9,7 +9,6 @@ require 'sinatra/activerecord'
 # API implementation requires twilio-ruby
 require 'twilio-ruby' 
 #
-# require 'sinatra-flash'
 
 # Here, we create the actual database if it's not created yet.
 # Otherwise, it will simply load the existing database: 
@@ -30,3 +29,4 @@ require_relative 'helper.rb'
 require_relative 'controllers/home.rb'
 require_relative 'controllers/game.rb'
 require_relative 'models/helper.rb'
+
