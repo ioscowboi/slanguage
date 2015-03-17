@@ -1,0 +1,6 @@
+<a href=""><img class="main" src="/images/car-driving-into-sunset-small.jpg"></a>
+<% if @logout_validator == @user_id && @user_id != nil %>
+<%= "<h2>#{@username}, you've been signed out!</h2>" %>
+<% else %>
+<%= "<h2>Redirecting to home screen...</h2>" %>
+<% end %>

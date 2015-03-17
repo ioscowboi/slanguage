@@ -1,0 +1,23 @@
+<% if @active_player != nil %>
+<%= "<h2 id='active_player'>Welcome, #{@active_player}!</h2>" %>
+<% else %>
+<%= "<h2 id='active_player'>You haven't signed in!</h2>" %>
+<% end %>
+<h2>To Win:</h2>
+<p class='wrapit'>
+	<ul>
+  <li class='normal'>-study the image</li>
+</br>
+  <li class='normal'>-choose 5 correct answers in a row</li>
+</ul>
+</p>
+
+<% if @active_player != nil %>
+<%= "<input class ='beginbutton' style='background-color: rgba(220, 20,20, 1);' type='submit' value=' Sign Out ' onclick='signOut()' />" %>
+<%= "     <input class ='beginbutton' type='submit' value=' Begin ' onclick='goHome()' />" %>
+<% else %>
+<%= "   <div id='loginButton'><a href='/#loginScreen' class='signup'>Click here to Log In</a>
+   </div>" %>
+<%= " <div id='goBacker'><a href='/' onclick='goBack();'> <-GO BACK </a></div>" %>
+<% end %>
+     </div>

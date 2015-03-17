@@ -12,6 +12,10 @@ require 'sinatra/activerecord'
 require 'twilio-ruby' 
 #
 
+configure :development do
+  set :database, {adapter: "sqlite3", database: 
+"slanguage.db"}
+end
 # Here, we create the actual database if it's not created yet.
 # Otherwise, it will simply load the existing database: 
 # ex: DATABASE = DATABASEINTERPRETERNAME::Databaseobjectname.new('yourdesired_database_name')

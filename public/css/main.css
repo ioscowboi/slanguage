@@ -416,6 +416,9 @@ input.navbutton:hover, input.navbutton:focus{
   
 }
 
+#proper a{
+  color: white;
+}
 #proper:hover{
   background-color: rgba(0, 200, 200, 1); 
   text-decoration: none;
