@@ -4,7 +4,8 @@ source "https://rubygems.org"
 # gem "rails"
 gem 'rails'
 
-gem 'sqlite3'
+gem 'sqlite3', :groups => [:development,:test]
+gem 'pg',  :groups => [:production]
 gem 'pry'
 gem 'rspec'
 gem 'sinatra', '~>1.4.5'
