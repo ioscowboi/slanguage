@@ -403,6 +403,7 @@ input.navbutton:hover, input.navbutton:focus{
 }
 
 #proper{
+  font-family: 'Lora', serif;
   font-size: 160%;
   width: 300px;
   height: 40px;
@@ -410,15 +411,17 @@ input.navbutton:hover, input.navbutton:focus{
   color:white; 
   border-radius:10px 10px 10px 10px; 
   margin: 0px auto;
-  padding-top: 20px;
+  padding-top: 10px;
   text-decoration: none;
   
 }
 
-#proper.hover{
-  color:blue; 
+#proper:hover{
+  background-color: rgba(0, 200, 200, 1); 
   text-decoration: none;
 }
+
+
 
 #proper a:visited{
   color: white;
@@ -468,6 +471,12 @@ a:link{
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
+  
+}
+
+.signUpButton:hover{
+  background-color: rgba(0, 200, 200, 1); 
+  text-decoration: none;
   
 }
 

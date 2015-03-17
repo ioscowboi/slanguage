@@ -34,7 +34,7 @@ before "/begin" do
 
 end
 
-get "/submit" do
+post "/submit" do
   @user = params[:user]
   @pass = params[:password]
   @db_info = Player.where(username: @user)
@@ -69,7 +69,7 @@ get "/signup/*" do
   erb :signup
 end
 
-get "/enter" do
+post "/enter" do
   @person = params[:user]
   @all_info = params
   params[:password] = BCrypt::Password.create(params["password"])
