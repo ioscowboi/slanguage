@@ -57,7 +57,6 @@ end
 get "/welcome/*" do
   @active_player = session[:name]
   @active_id     = session[:id]
-  
   erb :page2, :layout => :startpageboilerplate
 end
 

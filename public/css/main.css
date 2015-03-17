@@ -19,7 +19,7 @@ ul{
 	display: inline;
 	list-style-type: none;
 	text-decoration: none;
-	text-align: center;
+	text-align: left;
 	color: white;
 	margin: auto;
 }
@@ -29,7 +29,7 @@ li{
 	display: inline;
 	list-style-type: none;
 	text-decoration: none;
-	text-align: center;
+	text-align: left;
 	padding: 25px 25px 25px 25px;
 }
 
@@ -45,13 +45,13 @@ p.wrapit{
 }
 
 a:hover{
-	color: rgba(0,0,255,1);
+	color: rgba(200,0,255,1);
 }
 
 li.normal{
 	list-style-type: square;
 	text-decoration: normal;
-	text-align: center;
+	text-align: left;
 	color: rgba(255,255, 255, 1);
 	margin: 1px;
 	text-size: 200px;
