@@ -16,6 +16,18 @@ configure :development do
   set :database, {adapter: "sqlite3", database: 
 "slanguage.db"}
 end
+
+configure :production do
+  db = URI.parse(ENV['DATABASE_URL'])
+  ActiveRecord::Base.establish_connection(
+    :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :host     => db.host,
+    :username => db.user,
+    :password => db.password,
+    :database => db.path[1..-1],
+    :encoding => 'utf8'
+  )
+end
 # Here, we create the actual database if it's not created yet.
 # Otherwise, it will simply load the existing database: 
 # ex: DATABASE = DATABASEINTERPRETERNAME::Databaseobjectname.new('yourdesired_database_name')
