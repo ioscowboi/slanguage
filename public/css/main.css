@@ -403,6 +403,7 @@ input.navbutton:hover, input.navbutton:focus{
 }
 
 #proper{
+  display: block;
   font-family: 'Lora', serif;
   font-size: 160%;
   width: 300px;
@@ -425,6 +426,12 @@ input.navbutton:hover, input.navbutton:focus{
 
 #proper a:visited{
   color: white;
+}
+
+.bigbutton{
+  display: block;
+  margin: auto;
+  padding: 0px 0px;
 }
 
 #goBacker{
@@ -698,6 +705,8 @@ input.button:hover, input.updatebutton:focus {
 		box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2); 
 		font-weight:bold; 
 		text-decoration:none;
+    display: block;
+    margin: auto;
 	} 
 		
 	#cover{ 
