@@ -24,8 +24,6 @@ add_up         = 0
   test_array  << add_up
 end
 
-# session[:person]<< @person.id
-# flash[:notice] = "Welcome!"
 
 before "/begin" do
   if session[:id] == nil

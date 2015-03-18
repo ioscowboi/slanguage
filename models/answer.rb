@@ -16,10 +16,10 @@ class Answer
   attr_accessor :text, :cards_id, :correct_answer
   
   def initialize(options)
-    @id = options["id"].to_i
-    @text = options["text"]
-    @cards_id = options["cards_id"]
-    @correct_answer = options["correct_answer"]
+    @id = options["id".to_i]
+    @text = options["text".to_s]
+    @cards_id = options["cards_id".to_i]
+    @correct_answer = options["correct_answer".to_i]
   end
   
   # Public: #bad_choice_generator 

@@ -13,8 +13,8 @@ class Card
   
   def initialize(options)
     @id = options["id".to_i]
-    @location = options["location"]
-    @card_id = options["card_id"]
+    @location = options["location".to_i]
+    @card_id = options["card_id".to_i]
   end
   
   def self.grab_card(id)
