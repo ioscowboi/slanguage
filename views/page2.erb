@@ -1,0 +1,37 @@
+<% if @logged_in == nil %>
+<%= "<h2>Not logged in!</h2>" %>
+<% else %>
+<%= "<h2>Welcome, #{@name}!</h2>" %>
+<%= "<h2>to win:</h2>" %>
+<% end %>
+<p class='wrapit'>
+	<ul>
+  <li class='normal'>-study the image</li>
+</br>
+  <li class='normal'>-answer 5 correct before 3 incorrect answers occur</li>
+</ul>
+
+          <% if @logged_in == nil %>
+          <%= "<h4>not a member?</h4>"%>
+          <% else %>
+          <%=  "<h4>ready to play?</h4>" %>
+            <% end %>
+<br/><br/>
+</p>
+
+          <% if @logged_in == nil %>
+          <%= "<h4 id='proper'><a href='/signup/sign_up'>sign up</a><h4/>" %>
+          <% else %>
+          <%= "<h4 id='proper'><a href='/begin'>Play Now</a><h4/>"%>
+            <% end %>
+
+<!--this will be the pop up box to sign in. not yet though! all the code is there for the popup, you just haven't learned
+sessions yet -->
+            <% if @logged_in == nil %>
+<%= "   <div id='loginButton'><a href='#loginScreen' class='signup'>Click here to Log In</a>
+   </div>" %>
+   <% else %>
+   <%= "<div id='loginButton'><a href='/sign_out' class='signup'>sign out</a>" %>
+   <% end %>
+   
+

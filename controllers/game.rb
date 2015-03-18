@@ -231,6 +231,6 @@ get "/sign_out" do
   @logout_validator = session[:id]
   session[:name]= nil
   session[:id]= nil
-  binding.pry
+  @logged_in = session[:id]
   erb :signed_out, :layout => :game_over_boiler
 end
