@@ -65,7 +65,7 @@ get "/signup/*" do
   @new_username = params[:splat]
   @new_username = @new_username[0]
   
-  erb :signup
+  erb :sign_up
 end
 
 post "/enter" do
