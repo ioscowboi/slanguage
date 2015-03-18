@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="initial-scale=1.0">
+  <title>Slanguage :: The game to test your swag</title>
+
+  <link rel="stylesheet" href='/css/main.css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	
+
+<div class="navdiv">
+<h1>SLANGUAGE</h1></div>
+</br>
+
+
+    <div class='signupform'>
+<% if @new_username == "sign_up" %>
+<h2>Sign up below:</h2>
+<% else %>
+  <h2><%= @new_username %> is available!</h2>
+  <% end %>
+
+    <form method="post" action="/enter">
+
+      full name:
+      <input class="sighnUp" type="text" name="name"></input>
+      <br/>
+      username:
+
+      <input class="sighnUp" type="text" name="user" value="<%= @new_username %>"></input>
+      <br/>
+      password:
+      <input class="sighnUp" type="password" name="password"></input>
+      <br/>
+      phone:
+      <input class="sighnUp" type="text" name="phone"></input>
+      <br/>
+      email:
+      <input class="sighnUp" type="text" name="email"></input>
+      <br/>
+      age:
+      <input class="sighnUp" type="text" name="age"></input>
+      <br/>
+      <input class ="signUpButton" type="submit" value="Submit"/>
+            <br/>
+    </form>
+  </div>
+  <br/>
+              <div id="goBacker"><a href="/" onclick="goBack();"> <-GO BACK </a></div>
+</body>
+
+      <script>
+      function newDoc() {
+          window.location.assign("/")
+      };
+      </script>
+<script type="text/javascript">date_populate("date", "month", "year");</script>
+<script type="text/javascript">
+function goBack () {
+window.location = '/';
+return false;
+}
+</script>
+  
+<script type="text/javascript">
+function goHome () {
+window.location = '/begin'; 
+return false;
+}
+</script>
+
+
+
+</html>
