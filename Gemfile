@@ -6,8 +6,8 @@ gem 'rails'
 
 # ///////////////////////////////////////////////////
 # used to set up application for a deploy on heroku:
-# gem 'sqlite3', :groups => [:development,:test]
-# gem 'pg',  :groups => [:production]
+gem 'sqlite3', :groups => [:development,:test]
+gem 'pg',  :groups => [:production]
 # end section
 # ///////////////////////////////////////////////////
 
