@@ -57,6 +57,10 @@ li.normal{
 	text-size: 200px;
 }
 
+.transparent{
+  background-color: rgba(0,0,0,0);
+
+}
 
 div{
 	border: solid rgba(25,25,25,.2);
@@ -709,6 +713,11 @@ input.button:hover, input.updatebutton:focus {
     display: block;
     margin: auto;
 	} 
+  
+	#signup2 {
+    color: red; 
+
+	} 
 		
 	#cover{ 
 		position:fixed; 
@@ -746,7 +755,8 @@ input.button:hover, input.updatebutton:focus {
 		margin: auto; 
 		position:relative; 
 		z-index: 10; 
-		display:none;  
+		display:none; 
+    background-color: rgba(0,0,0,0.0); 
 		border:5px solid #cccccc; 
 		border-radius:10px; 
     -webkit-transition: all 5s ease-in-out;
