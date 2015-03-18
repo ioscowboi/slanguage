@@ -19,15 +19,15 @@
 </p>
 
           <% if @logged_in == nil %>
-          <%= "<h4 id='proper'><a href='/signup/sign_up'>sign up</a><h4/>" %>
+          <%= "<h4 id='proper'><a href='/signup/sign_up' class='bigbutton'>sign up</a><h4/>" %>
           <% else %>
-          <%= "<h4 id='proper'><a href='/begin'>Play Now</a><h4/>"%>
+          <%= "<h4 id='proper'><a href='/begin' class='bigbutton'>Play Now</a><h4/>"%>
             <% end %>
 
 <!--this will be the pop up box to sign in. not yet though! all the code is there for the popup, you just haven't learned
 sessions yet -->
             <% if @logged_in == nil %>
-<%= "   <div id='loginButton'><a href='#loginScreen' class='signup'>Click here to Log In</a>
+<%= "   <div id='loginButton'><a href='#loginScreen' class='signup'>Log In</a>
    </div>" %>
    <% else %>
    <%= "<div id='loginButton'><a href='/sign_out' class='signup'>sign out</a>" %>
