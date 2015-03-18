@@ -227,10 +227,10 @@ end
 
 get "/sign_out" do
   @username = session[:name]
-  @user_id   = session[:id]
+  @user_id = session[:id]
   @logout_validator = session[:id]
   session[:name]= nil
   session[:id]= nil
-
+  binding.pry
   erb :signed_out, :layout => :game_over_boiler
 end
