@@ -1,7 +1,15 @@
+<% if @logged_in == nil %>
 <a href=""><img class="main" src="/images/car-driving-into-sunset.jpg"></a>
 
-<%= "<h2>#{@username}, you are signed out!</h2>" %>
-            <% if @logged_in == nil %>
-<%= "   <div id='loginButton'><a href='#loginScreen' class='signup'>Click here to Log In</a>
+<%= "<h2>#{@username} you are signed out!</h2>" %>
+            
+<%= "<div id='loginButton'><a href='#loginScreen' class='signup'>Click here to Log In</a>
    </div>" %>
-   <% end %>
+   
+   <% else %>
+   <a href=""><img class="main" src="/images/car-driving-into-sunset.jpg"></a>
+
+   <%= "<h2>You're still signed in!</h2>" %>
+            
+   <%= "<div id='loginButton'><a href='/sign_out' class='signup'>sign out</a></div>" %>
+      <% end %>
