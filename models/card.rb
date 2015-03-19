@@ -8,25 +8,25 @@
 #
 # Methods:
 # #initialize, #grab_card
-class Card
-  attr_accessor :id, :location, :card_id
-  
-  def initialize(options)
-    @id = options["id".to_i]
-    @location = options["location"]
-    @card_id = options["card_id"]
-  end
-  
-  def self.grab_card(id)
-    
-    results = DATABASE.execute("SELECT * FROM cards WHERE card_id = #{id}")
-
-    results_as_objects = []
-    
-    results.each do |r|
-      results_as_objects << self.new(r)
-    end
-    
-    results_as_objects
-  end
+class Card < ActiveRecord::Base
+  # attr_accessor :id, :location, :card_id
+  #
+  # def initialize(options)
+  #   @id = options["id".to_i]
+  #   @location = options["location"]
+  #   @card_id = options["card_id"]
+  # end
+  #
+  # def self.grab_card(id)
+  #
+  #   results = DATABASE.execute("SELECT * FROM cards WHERE card_id = #{id}")
+  #
+  #   results_as_objects = []
+  #
+  #   results.each do |r|
+  #     results_as_objects << self.new(r)
+  #   end
+  #
+  #   results_as_objects
+  # end
 end

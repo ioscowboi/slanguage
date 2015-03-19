@@ -116,10 +116,11 @@ get "/begin" do
   been_used << @id_picker
 
 # grab the following: image location from the database, one(only one) correct choice, and 3 incorrect choices
-  @image_picker   = Card.grab_card(@id_picker)
-  @right_choice   = Answer.correct(@id_picker)
-  @wrong_choices  = Answer.bad_choice_generator(@id_picker)
-  
+  @image_picker = Card.where(card_id: @id_picker)
+  @right_choice = Answer.where(cards_id: @id_picker, correct_answer: 1)
+  @wrong_choices = Answer.where(cards_id: @id_picker, correct_answer: 0)
+  random_bad_choices = Answer.new
+  @wrong_choices = random_bad_choices.get_three(@wrong_choices)
   @all_choices    = []
   
   #combine all correct and incorrect choices (total = 4 choices) together and then scramble them a random number of times 
