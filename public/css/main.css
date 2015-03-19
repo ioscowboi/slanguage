@@ -84,6 +84,10 @@ div{
   position: relative;
   margin: 10px auto;
 }
+
+#loginButton a{
+  color: rgba(0,0,150, 1);
+}
 div.transparent{
 	border: solid rgba(25,25,25,.0);
 	border-radius: 10px 10px 10px 10px;
