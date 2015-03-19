@@ -44,10 +44,10 @@ post "/submit" do
   end
   validate = Helper.new
   validate = validate.login(@user, @pass, @db_info)
-  
   if validate == true
     session[:id]= @db_info.id
     session[:name]= @db_info.name
+    session[:phone]= @db_info.phone
     redirect ("/welcome/#{@db_info.id}")
   else
     redirect ('/#loginScreeninvalid')
@@ -76,6 +76,7 @@ post "/enter" do
   profile = Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
   session[:id] = profile.id
   session[:name]= profile.name
+  session[:number]= profile.phone
   redirect ("/welcome/#{@person}")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
@@ -176,13 +177,14 @@ end
 # runs if the player has answered 5 choices correctly
 get "/winner" do
   @winner = session[:name]
+  @number = session[:phone]
   #reset variables to zero
   game_count   = 0
   been_used    = []
   lost         = 0
   #sends text message to the winner!
   text_message = Helper.new
-  text_message.winner(@winner)
+  text_message.winner(@winner, @number)
   
   erb :winner, :layout => :winner_boiler
 end
@@ -199,14 +201,16 @@ end
 
 # runs if the player has submitted 3 incorrect choices 
 get "/game_over" do
+  binding.pry
   #reset variables to zero
   lost         = 0
   game_count   = 0
   been_used    = []
   @not_winner  = session[:name]
+  @number = session[:phone]
   #sends text message to encourage the player to try again
   text_message = Helper.new
-  text_message.game_over(@not_winner)
+  text_message.game_over(@not_winner, @number)
 
   erb :game_over, :layout => :game_over_boiler
 end
@@ -233,6 +237,7 @@ get "/sign_out" do
   @logout_validator = session[:id]
   session[:name]= nil
   session[:id]= nil
+  session[:phone]= nil
   @logged_in = session[:id]
   erb :signed_out, :layout => :game_over_boiler
 end

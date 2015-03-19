@@ -36,23 +36,23 @@
     <form method="post" action="/enter">
 
       full name:
-      <input class="sighnUp" type="text" name="name"></input>
+      <input class="sighnUp" type="text" name="name" required></input>
       <br/>
       username:
 
-      <input class="sighnUp" type="text" name="user" value="<%= @new_username %>"></input>
+      <input class="sighnUp" type="text" name="user" value="<%= @new_username %>" required></input>
       <br/>
       password:
-      <input class="sighnUp" type="password" name="password"></input>
+      <input class="sighnUp" type="password" name="password" required></input>
       <br/>
       phone:
-      <input class="sighnUp" type="text" name="phone"></input>
+      <input class="sighnUp" type="tel" maxlength="10" placeholder="4021234567" name="phone" required></input>
       <br/>
       email:
-      <input class="sighnUp" type="text" name="email"></input>
+      <input class="sighnUp" type="text" placeholder="example@slanguagegame.com" name="email" required ></input>
       <br/>
       age:
-      <input class="sighnUp" type="text" name="age"></input>
+      <input class="sighnUp" type="text" name="age" required></input>
       <br/>
       <input class ="signUpButton" type="submit" value="Submit"/>
             <br/>
