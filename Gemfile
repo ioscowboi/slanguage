@@ -2,8 +2,7 @@
 source "https://rubygems.org"
 
 ruby '2.2.0'
-# gem "rails"
-gem 'rails'
+
 
 # ///////////////////////////////////////////////////
 # used to set up application for a deploy on heroku:
