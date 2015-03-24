@@ -786,6 +786,7 @@ input.button:hover, input.updatebutton:focus {
 		position:relative; 
 		z-index: 10; 
 		display:none;  
+    background-color: rgba(0,0,0,0.0);
 		border:5px solid #cccccc; 
 		border-radius:10px; 
     -webkit-transition: all 5s ease-in-out;
@@ -793,6 +794,7 @@ input.button:hover, input.updatebutton:focus {
     -o-transition: all 5s ease-in-out;
     transition: all 5s ease-in-out;
 	} 
+
 
 	#loginScreeninvalid:target, #loginScreeninvalid:target + #coverinvalid{ 
 		display:block; 

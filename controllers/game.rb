@@ -76,7 +76,7 @@ post "/enter" do
   profile = Player.create(name: params[:name], password: params[:password], username: params[:user], age: params[:age], email: params[:email], phone: params[:phone]) 
   session[:id] = profile.id
   session[:name]= profile.name
-  session[:number]= profile.phone
+  session[:phone]= profile.phone
   redirect ("/welcome/#{@person}")
 end
 # this route handler runs the game : [generates images, and matches them to the possible answers during each round]
@@ -201,7 +201,6 @@ end
 
 # runs if the player has submitted 3 incorrect choices 
 get "/game_over" do
-  binding.pry
   #reset variables to zero
   lost         = 0
   game_count   = 0
