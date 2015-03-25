@@ -40,7 +40,7 @@ unless ActiveRecord::Base.connection.table_exists?(:answers)
   ActiveRecord::Base.connection.create_table :answers do |t|
     t.text :text
     t.integer :cards_id
-    t.integer :coarrect_answer
+    t.integer :correct_answer
   end 
 end
 

@@ -47,4 +47,5 @@ require_relative 'models/player.rb'
 require_relative 'controllers/home.rb'
 require_relative 'controllers/game.rb'
 require_relative 'models/helper.rb'
+require_relative 'seed.rb'
 
