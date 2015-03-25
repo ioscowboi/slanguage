@@ -37,8 +37,6 @@ configure :development do
   set :database, {adapter: "sqlite3", database: "slanguage.db"}
 end
 
-# establish database connection: 
-set :database, {adapter: "sqlite3", database: "slanguage.db"}
 # Loading all erb and rb files so they can talk to one another as needed: 
 
 require_relative 'db_setup.rb'
