@@ -1,8 +1,11 @@
 require 'sinatra' 
 require 'pry'
 require 'rubygems'
-# Initialize and enable our program to run SQLITE3 : 
-require 'sqlite3'
+
+configure :development do
+  # Initialize and enable our program to run SQLITE3 : 
+  require 'sqlite3'
+end
 
 require 'bcrypt'
 
